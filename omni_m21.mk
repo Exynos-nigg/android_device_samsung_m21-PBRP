@@ -20,6 +20,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 # Include any options that can't be included in BoardConfig.mk
 $(call inherit-product, device/samsung/m21/device.mk)
 
+# PBRP Specific vars!
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/pb/config/common.mk)
+
+# ARM64 PBRP Variable
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# PBRP Dalvik Optimization
+$(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_m21
 PRODUCT_DEVICE := m21

@@ -94,3 +94,13 @@ BOARD_GOOGLE_DYNAMIC_PARTITIONS_SIZE := 3182952448
 
 # Set error limit to BOARD_SUPER_PARTITION_SIZE - 500MB
 BOARD_SUPER_PARTITION_ERROR_LIMIT := 5858394112
+
+# PBRP Vars
+# Disable DM verity proccess on boot
+PB_DISABLE_DEFAULT_DM_VERITY := true
+# Maintainer info
+MAINTAINER := "bruh™ @Exynos-nigg"
+# Duplicate var [temporary]
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 999999999
+# Experimental torch patch
+PB_TORCH_PATH := "/sys/class/leds/torch-sec1"
