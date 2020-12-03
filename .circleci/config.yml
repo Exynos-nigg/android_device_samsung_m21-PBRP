@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  build:
+   docker:
+      - image: ubuntu:18.04
+   steps:
+      - run:
+          name: Start baking PBRP! =)
+          command: |
+            apt-get -y update && apt-get -y upgrade && apt-get -y install wget git && wget https://raw.githubusercontent.com/Exynos-nigg/android_device_samsung_m21-PBRP/android-10.0/circle.sh && bash circle.sh 
+      - store_artifacts:
+          path: ~/output/
